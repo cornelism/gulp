@@ -15,7 +15,7 @@ var tasks = require('../config').tasks;
 // console.log('requirements: ' + config.requirements);
 
 gulp.task(tasks.sass, function(callback){
-	runsequence(tasks.clean,/* tasks.sprites, */'compile_sass', tasks.minify_css, callback);
+	runsequence(tasks.clean, tasks.sprites, 'compile_sass', tasks.minify_css, callback);
 });
 
 gulp.task('compile_sass', function () {

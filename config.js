@@ -1,5 +1,6 @@
 var	theme		=	'../../docroot/sites/all/themes/oxfam/',		// path to used theme
-	css_type	=	'sass',		// 'sass' or 'less',
+	css_type	=	'sass',
+	modules_folder  	=	'../../docroot/sites/all/modules/custom/',
 	src_folder	=	theme + 'src/',
 	dest_folder	=	theme +'dest/';
 
@@ -7,6 +8,7 @@ module.exports = {
 
 	tasks : {					// Task naming here
 		sass: 'sass',
+		fonts: 'fonts',
 		sprites: 'sprites',
 		minify_css: 'min_css',
 		clean: 'clean'
@@ -31,20 +33,27 @@ module.exports = {
 		dest : dest_folder + 'js/'
 	},
 
+	fonts : {
+		folder : theme + "fonts/"
+	},
+
 	images : {
-		src : src_folder + 'images/**/*.png',
-		dest : src_folder + 'sprites/',
+		src : src_folder + 'images/layout/**/*.png',
+		dest : dest_folder + 'sprites/',
 		sass : src_folder + 'sass/sprites/',
 		cssPath : '../../sprites/',				// rel. path to sprite from css
 		filename_sass : 'sprites.sass',		// sprites mixin filename
-		filename_img : 'sprite.png',			// sprite img filename
+		filename_img : 'sprite.png',		// sprite img filename
 		proc : 'sass'						// processor: sass or scss
 	},
 
 	watch : {
 		type : css_type,
+		module_templates : modules_folder + '**/*.tpl.php',
+		templates : theme + '**/*.tpl.php',
 		sass : src_folder + 'sass/**/*.{sass,scss}',
-		images : src_folder + 'images/**/*.{png,jpg,gif,jpeg,bpm}'
+		images : src_folder + 'images/**/*.{png,jpg,gif,jpeg,bpm}',
+		fonts : src_folder + 'fonts/*.{ttf,eot,woff,svg}'
 	},
 
 	clean : {
