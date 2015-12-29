@@ -1,11 +1,11 @@
 {
-  "author": "@dropsolid",
+  "author": "@cornelism",
   "name": "gulp_ds",
   "version": "0.0.4",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:dropsolid/gulp_ds.git"
+    "url": ""
   },
   "devDependencies": {
     "browser-sync": "^2.5.2",

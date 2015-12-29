@@ -2,23 +2,23 @@ var gulp = require('gulp');
 var config = require('../config').watch;
 var tasks = require('../config').tasks;
 
-var browserSync 	= require('browser-sync');
-var reload			= browserSync.reload;
+//var browserSync 	= require('browser-sync');
+//var reload			= browserSync.reload;
 
 gulp.task('watch', function() {
 
-	browserSync({
+/*	browserSync({
 		proxy: "oxfamdigi.local",
-		browser: ["chromium-browser"/*, "firefox"*/]
-	});
+		browser: ["chromium-browser", "firefox"]
+	});*/
 
 	// Watch module template files
-	gulp.watch(config.module_templates)
+/*	gulp.watch(config.module_templates)
 		.on('change', reload);
 
 	// Watch template files
 	gulp.watch(config.templates)
-		.on('change', reload);
+		.on('change', reload);*/
 
 	// Watch font files
 	// gulp.watch(config.fonts, [tasks.fonts])

@@ -1,6 +1,6 @@
 var	css_type	=	'scss',
-	src_folder	=	'./src/',
-	dest_folder	=	'./dist/';
+	src_folder	=	'../src/',
+	dest_folder	=	'../dist/';
 
 module.exports = {
 
@@ -15,9 +15,8 @@ module.exports = {
 	sass : {
 		requirements : [	'susy',
 							'compass',
-							'compass-normalize'
-						],
-		src : src_folder + 'styles/*.{sass,scss}',
+							'compass-normalize'		],
+		src : src_folder + 'stylesheets/**/*.{sass,scss}',
 		dest : dest_folder + "css/"
 	},
 
@@ -32,7 +31,7 @@ module.exports = {
 	},
 
 	fonts : {
-		folder : "./fonts/"
+		folder : "../src/fonts/"
 	},
 
 	images : {
@@ -47,7 +46,7 @@ module.exports = {
 
 	watch : {
 		type : css_type,
-		sass : src_folder + 'sass/**/*.{sass,scss}',
+		sass : src_folder + 'stylesheets/**/*.{sass,scss}',
 		images : src_folder + 'images/**/*.{png,jpg,gif,jpeg,bpm}',
 		fonts : src_folder + 'fonts/*.{ttf,eot,woff,svg}'
 	},
