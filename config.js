@@ -1,6 +1,6 @@
-var	theme		=	'../../docroot/sites/all/themes/oxfam/',		// path to used theme
+var	theme		=	'',		// path to used theme
 	css_type	=	'sass',
-	modules_folder  	=	'../../docroot/sites/all/modules/custom/',
+	modules_folder  	=	'',
 	src_folder	=	theme + 'src/',
 	dest_folder	=	theme +'dest/';
 
