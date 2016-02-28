@@ -1,8 +1,11 @@
-var	theme		=	'',		// path to used theme
-	css_type	=	'sass',
+var	theme				=	'',
+	path				=	'../bnp-expertise-day/',
+	app 				=	path + 'app/',
+	dist				=   '',
+	src_folder			=	app + 'src/',
+	dest_folder			=	theme +'dest/',
 	modules_folder  	=	'',
-	src_folder	=	theme + 'src/',
-	dest_folder	=	theme +'dest/';
+	css_type			=	'sass';
 
 module.exports = {
 
@@ -44,7 +47,7 @@ module.exports = {
 		cssPath : '../../sprites/',				// rel. path to sprite from css
 		filename_sass : 'sprites.sass',		// sprites mixin filename
 		filename_img : 'sprite.png',		// sprite img filename
-		proc : 'sass'						// processor: sass or scss
+		proc : css_type						// processor: sass or scss
 	},
 
 	watch : {
